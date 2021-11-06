@@ -1,4 +1,4 @@
-console.log("git Testing")
+console.log("git Testing2")
 const button = document.querySelector('.talk') 
 const content = document.querySelector('.content')
 const SpeechRecognition = window.speechRecognition || window.webkitSpeechRecognition;
