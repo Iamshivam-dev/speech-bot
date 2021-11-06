@@ -22,8 +22,12 @@ button.addEventListener('click', ()=>{
 
 const speakIt = (message) =>{
     const speech = new SpeechSynthesisUtterance();
-    speech.text = message
+
+    if(message.includes('how are you')){
+        speech.text = "Im good, baby"
+    }
     speech.volume = 1        
-    speech.rate = 1
-    speech.pitch = 1
+    speech.rate = 0.5
+    speech.pitch = 0
+    window.speechSynthesis.speak(speech)
 }
