@@ -38,7 +38,8 @@ const speakIt = async (message) =>{
         const speech = new SpeechSynthesisUtterance();
         // Message comparisons
         if(message.includes('how are you')){
-            text_to_speak ="Im good, baby"
+            reply = ["I am good", "I am fine", "Awesome!"]
+            text_to_speak =reply[Math.floor(Math.random() * jokes.length)]
 
         }else if(message.includes('tell me a joke') || message.includes('tell me joke') || message.includes('tell joke')){
             text_to_speak ="Here is a random joke. " + jokes[Math.floor(Math.random() * jokes.length)]
