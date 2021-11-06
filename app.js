@@ -12,9 +12,18 @@ recognition.onresult = function (event){
 
     const transcript = event.results[currentText][0].transcript
     content.textContent = transcript
+    speakIt(transcript)
 }
 
 // Add listener to button
 button.addEventListener('click', ()=>{
     recognition.start()
 })
+
+const speakIt = (message) =>{
+    const speech = new SpeechSynthesisUtterance();
+    speech.text = message
+    speech.volume = 1        
+    speech.rate = 1
+    speech.pitch = 1
+}
