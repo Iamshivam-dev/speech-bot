@@ -25,6 +25,11 @@ const speakIt = (message) =>{
 
     if(message.includes('how are you')){
         speech.text = "Im good, baby"
+    }else if(message.includes('tell me a joke')){
+        speech.text = "You are a joke"
+    }
+    else if(message.includes('tell me joke')){
+        speech.text = "this is another joke"
     }
     speech.volume = 1        
     speech.rate = 0.5
