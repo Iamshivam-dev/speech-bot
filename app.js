@@ -33,8 +33,8 @@ const speakIt = (message) =>{
             speech.text = "this is another joke"
         }
         speech.volume = 1        
-        speech.rate = 0.5
-        speech.pitch = 0
+        speech.rate = 1
+        speech.pitch = 1
         window.speechSynthesis.speak(speech)
     }catch(error){
         alert(error)
